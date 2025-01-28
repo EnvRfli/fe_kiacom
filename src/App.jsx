@@ -7,6 +7,9 @@ import Header from './components/header';
 import Sidebar from './components/sidebar';
 import Dashboard from './pages/dashboard_pages/dashboard';
 import Product from './pages/dashboard_pages/product';
+import Brand from './pages/dashboard_pages/brand';
+import Category from './pages/dashboard_pages/category';
+import AddTransaction from './pages/dashboard_pages/addTransaction';
 
 
 function App() {
@@ -16,7 +19,7 @@ function App() {
         <Sidebar />
         <div className='sm:ml-64'>
           <Routes>
-            <Route path='/' element={<Product />} />
+            <Route path='/' element={<AddTransaction />} />
           </Routes>
         </div>
       </div>
