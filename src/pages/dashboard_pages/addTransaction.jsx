@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ProductSelector from "../../components/productSelector";
 
 const AddTransaction = () => {
     const [transactionType, setTransactionType] = useState("income"); // "income" or "expense"
@@ -131,7 +132,7 @@ const AddTransaction = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     <label htmlFor="product" className="text-white font-semibold ml-1">Pilih Produk</label>
-                                    <select
+                                    {/* <select
                                         id="product"
                                         value={selectedProduct ? selectedProduct.id : ""}
                                         onChange={handleProductChange}
@@ -143,7 +144,13 @@ const AddTransaction = () => {
                                                 {product.name} - ${product.price}
                                             </option>
                                         ))}
-                                    </select>
+                                    </select> */}
+
+                                    <ProductSelector
+                                        products={products}
+                                        selectedProduct={selectedProduct}
+                                        handleProductChange={handleProductChange}
+                                    />
                                 </div>
 
                                 <div className="space-y-2">

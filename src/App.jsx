@@ -10,6 +10,9 @@ import Product from './pages/dashboard_pages/product';
 import Brand from './pages/dashboard_pages/brand';
 import Category from './pages/dashboard_pages/category';
 import AddTransaction from './pages/dashboard_pages/addTransaction';
+import AddBrand from './pages/dashboard_pages/addbrand';
+import AddCategory from './pages/dashboard_pages/addCategory';
+import AddProduct from './pages/dashboard_pages/addProduct';
 
 
 function App() {
@@ -19,7 +22,7 @@ function App() {
         <Sidebar />
         <div className='sm:ml-64'>
           <Routes>
-            <Route path='/' element={<AddTransaction />} />
+            <Route path='/' element={<AddProduct />} />
           </Routes>
         </div>
       </div>
