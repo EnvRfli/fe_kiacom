@@ -113,14 +113,12 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Right Section: Hero Section (Replacing Best-Selling Products) */}
                 <div className="bg-yellow-50 rounded-tl-4xl p-4 flex flex-col justify-center items-center">
                     <h1 className="text-yellow-900 text-3xl font-bold text-center mb-4">Promo Potongan Harga!</h1>
                     <p className="text-yellow-900 text-lg text-center mb-6">
                         Dapatkan sampai dengan <span className="font-bold">50%</span> potongan harga pada produk pilihan kami saat ini!
                     </p>
                     <div className="relative">
-                        {/* Discount Ribbon */}
                         <div className="absolute -top-2 -right-2 bg-red-600 text-yellow-50 px-3 py-1 rounded-full text-sm font-bold transform rotate-12">
                             -50% off
                         </div>
@@ -201,6 +199,36 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="mx-4 mt-4 rounded-xl shadow-md p-4">
+                <h1 className="text-yellow-900 text-2xl font-bold text-center">Produk Kami</h1>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mb-4 mx-4">
+                    {
+                        Array.from({ length: 20 }).map((_, index) => (
+                            <div
+                                key={index}
+                                className="bg-yellow-50 p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg relative"
+                            >
+                                <div className="aspect-w-1 aspect-h-1">
+                                    <img
+                                        src="https://www.palit.com/product/vga/picture/p05345/p05345_propng_724676bd1c50f0e8.png"
+                                        alt="Product"
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <h2 className="text-yellow-900 font-semibold mt-2">Product Name</h2>
+                                <p className="text-yellow-900">Rp. 1.000.000</p>
+                                <div className="absolute inset-0 bg-yellow-800/50 opacity-0 hover:opacity-100 transition-opacity rounded-lg">
+                                    <div className="flex justify-center items-center h-full">
+                                        <button className="bg-yellow-50 text-yellow-900 px-4 py-1 rounded-lg hover:bg-yellow-200 transition-colors">
+                                            Detail Produk
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
 
