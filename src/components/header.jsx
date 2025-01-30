@@ -11,10 +11,21 @@ const Header = () => {
                     Kia Computer
                 </h1>
             </div>
-            <div className="flex items-center space-x-4">
-                <h1 className="text-lg font-semibold">
-                    Hello, User
-                </h1>
+
+            <div className="flex items-center space-x-10">
+                <nav className="space-x-4">
+                    <a href="#" className="hover:underline">Home</a>
+                    <a href="#" className="hover:underline">Product</a>
+                    <a href="#" className="hover:underline">About</a>
+                    <a href="#" className="hover:underline">Contact</a>
+                </nav>
+
+                <div className="flex items-center space-x-4">
+                    <h1 className="text-lg font-semibold">
+                        Hello, User
+                    </h1>
+                </div>
+
             </div>
         </header>
     );
