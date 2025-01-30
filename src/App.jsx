@@ -17,6 +17,7 @@ import AddProduct from './pages/dashboard_pages/addProduct';
 import Login from './pages/auth_pages/login';
 import Register from './pages/auth_pages/register';
 import Home from './pages/main_pages/home';
+import ProductDetail from './pages/main_pages/productDetail';
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faFacebook, faGithub, faInstagram, faLinkedin, faWhatsapp, faMailchimp } from "@fortawesome/free-brands-svg-icons";
@@ -33,7 +34,7 @@ function App() {
         <Header />
         {/* <div className='sm:ml-64'> */}
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<ProductDetail />} />
         </Routes>
         {/* </div> */}
         <Footer />
