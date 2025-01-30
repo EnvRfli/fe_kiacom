@@ -87,7 +87,7 @@ const ProductDetail = () => {
                     <div className='px-2'>
                         <p className='text-sm text-yellow-800 mb-1'>Deskripsi:</p>
                         <div
-                            className={`text-sm text-yellow-700 mb-1 overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[1000px]' : 'max-h-[100px]'}`}
+                            className={`text-sm text-yellow-700 mb-1 overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[1000px]' : 'max-h-[300px]'}`}
                         >
                             {description}
                         </div>
@@ -102,7 +102,36 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
-        </div>
+
+            <h1 className='text-2xl font-bold text-yellow-900 p-4'>Produk Serupa</h1>
+            <div className='p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4'>
+                {
+                    Array.from({ length: 20 }).map((_, index) => (
+                        <div
+                            key={index}
+                            className="bg-yellow-50 p-4 rounded-lg shadow-md flex flex-col items-center justify-center hover:shadow-lg relative"
+                        >
+                            <div className="aspect-w-1 aspect-h-1">
+                                <img
+                                    src="https://www.palit.com/product/vga/picture/p05345/p05345_propng_724676bd1c50f0e8.png"
+                                    alt="Product"
+                                    className="object-cover"
+                                />
+                            </div>
+                            <h2 className="text-yellow-900 font-semibold mt-2">Product Name</h2>
+                            <p className="text-yellow-900">Rp. 1.000.000</p>
+                            <div className="absolute inset-0 bg-yellow-800/50 opacity-0 hover:opacity-100 transition-opacity rounded-lg">
+                                <div className="flex justify-center items-center h-full">
+                                    <button className="bg-yellow-50 text-yellow-900 px-4 py-1 rounded-lg hover:bg-yellow-200 transition-colors">
+                                        Detail Produk
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div >
     );
 };
 

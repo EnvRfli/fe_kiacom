@@ -29,7 +29,7 @@ library.add(faFacebook, faGithub, faInstagram, faLinkedin, faWhatsapp, faMailchi
 function App() {
   return (
     <Router>
-      <div className='w-full min-h-screen bg-gray-700'>
+      <div className='w-full min-h-screen bg-yellow-50'>
         {/* <Sidebar /> */}
         <Header />
         {/* <div className='sm:ml-64'> */}
